@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<div >
+
+<div >
+<h2>Login</h2>
+<br />
+
+   <form action="/Home/Login2" method="post">
+    User Name : &nbsp;&nbsp;<input type="text" name="txtLogin" /> <br />
+       <br/>
+    Password &nbsp; :  &nbsp; <input type="password" name="txtPassword" /> <br />
+       <br />
+       <br />
+    <input type="submit" value="Login" />
+</form>
+</div>
+
+    <br />
+    <br />
+
+<div  >
+<h2>Sigb Up</h2>
+<br />
+
+<form action="/Home/Signup" method="post">
+    User Name : &nbsp;&nbsp;<input type="text" name="txtLogin" /> <br />
+    <br />
+    Password &nbsp; :  &nbsp; <input type="password" name="txtPassword" /> <br />
+    <br />
+    <br />
+    <input type="submit" value="SignUp" />
+</form>
+</div>
+
+</div>
+
+<br />
+<br />
+<div style="color:red">
+    @ViewBag.Msg
+</div>
+<div style="color:red">
+    @TempData["error"]
+</div>
+
+</div>
